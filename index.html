@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Invoice Listing Clone Page</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script language="Javascript">
+
+        /* select all control - functionality*/
+        function toggle(source) {
+            console.log("kkkk");
+            checkboxes = document.getElementById("checkbox");
+            for (var checkbox1 in checkboxes) {
+                console.log(checkbox1)
+                checkbox1.checked = source.checked;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="Invoice-Listing-Container">
+
+        <table class='root-table'>
+            <!-- Heading -->
+            <tr>
+                <td class="Heading">
+
+                    Invoices
+
+                </td>
+
+
+
+            </tr>
+            <tr>
+                <!-- Filters -->
+
+                <td>
+
+                    <table width=100%>
+                        <tr>
+                            <td width=60%>
+                                <table>
+                                    <tr>
+                                        <td>
+
+
+                                            <button class='btn'>
+                                                <i class="fa fa-filter"></i> Filter
+                                            </button>
+
+
+
+                                        </td>
+                                        <td>
+
+
+                                            <button class='btn'>
+                                                <i class="fas fa-store" style="color:rgb(153, 151, 151)"></i> Seller
+                                            </button>
+
+
+
+                                        </td>
+                                        <td>
+
+
+                                            <button class='btn'>
+                                                <i class="fa fa-money"></i> Currency
+                                            </button>
+
+
+
+                                        </td>
+                                        <td>
+
+
+                                            <button class='btn'>
+                                                <i class="fas fa-align-justify"></i> Peroperties
+                                            </button>
+
+
+
+                                        </td>
+
+                                    </tr>
+                                </table>
+
+                            </td>
+                            <td>
+                                <table width=100% class='text-align-center border-spacing'>
+                                    <tr>
+                                        <td class='Invoiced-Amount-Text border-right'>$17,506.89</td>
+                                        <td class="Balance-Due-Text border-right">$17,506.89</td>
+                                        <td class='Invoice-Count-Text'>13</td>
+                                    </tr>
+                                    <tr>
+                                        <td class='subtext-gray border-right'>Total Invoiced Amount</td>
+                                        <td class='subtext-gray border-right'>Total Balance Due</td>
+                                        <td class='subtext-gray'>Number of Invoices</td>
+
+                                    </tr>
+                                </table>
+
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </td>
+            </tr>
+            <tr height="10px"></tr>
+            <tr>
+                <!-- Invoice Listing Table -->
+                <td>
+
+
+                    <table width=100% style="border-spacing:0px">
+                        <tr class='Invoice-List-Head'>
+                            <td class='item border-right' align='center'>
+                                <input type="checkbox" title="select all" name="checkbox" id='checkbox'
+                                    onclick="toggle(this)" style="cursor: pointer;" />
+    </div>
+    </td>
+
+
+    <td class='item border-right'> Invoiced Date</td>
+    <td class='item border-right'>Account Number</td>
+    <td class='item border-right'>Account Name</td>
+    <td class='item border-right'>Invoice Number</td>
+    <td class='item border-right'>Balance Due</td>
+    <td class='item border-right'>Invoice Amount</td>
+    <td class='item border-right'>Due Date</td>
+    <td class='item border-right'>Notified Date</td>
+    <td class='item border-right'>Seller Name</td>
+    <td class='item border-right'>Status</td>
+    <td class='item'></td>
+
+    </tr>
+
+    <tr>
+
+        <td class='item' align='center'><input type="checkbox" title="select all" name="checkbox" id='checkbox' />
+            </div>
+        </td>
+        <td class='date-value-box'>
+            <table>
+                <tr>
+                    <td><i class="fa fa-calendar space" aria-hidden="true"></i> </td>
+                    <td>30/05/2022</td>
+                </tr>
+            </table>
+
+
+
+
+        </td>
+        <td class='anhor-link'><a href="#">SR1103</a></td>
+        <td class='data-style'>Bill Brown</td>
+        <td class='anhor-link'><a href="#">IN1234</a></td>
+        <td class='data-style space' align='end'>$2,800.00</td>
+        <td class='data-style space' align='end'>$2,800.00</td>
+        <td class='date-value-box'>
+            <table>
+                <tr>
+                    <td><i class="fa fa-calendar space" aria-hidden="true"></i> </td>
+                    <td>14/06/2022</td>
+                </tr>
+            </table>
+
+
+
+
+        </td>
+        <td class='date-value-box'>
+            <table>
+                <tr>
+                    <td><i class="fa fa-calendar space" aria-hidden="true"></i> </td>
+                    <td>01/02/2022</td>
+                </tr>
+            </table>
+
+
+
+
+        </td>
+        <td class='data-style'>NZTG Production</td>
+        <td>
+
+            <table align="center">
+                <tr>
+                    <td class="due space-left space">Due</td>
+                    <td>
+                        <div class='divider'></div>
+                    </td>
+                    <td><button class="paynow-btn">Pay Now</button></td>
+                </tr>
+            </table>
+        </td>
+        <td><i class="fa fa-gear" style="color:#797b7e;font-size: 18px;cursor: pointer;"></i></td>
+
+        </th>
+    </tr>
+    <tr>
+
+        <td class='item' align='center'><input type="checkbox" title="select all" name="checkbox" id='checkbox' />
+            </div>
+        </td>
+        <td class='date-value-box'>
+            <table>
+                <tr>
+                    <td><i class="fa fa-calendar space" aria-hidden="true"></i> </td>
+                    <td>30/05/2022</td>
+                </tr>
+            </table>
+
+
+
+
+        </td>
+        <td class='anhor-link'><a href="#">SR1103</a></td>
+        <td class='data-style'>Bill Brown</td>
+        <td class='anhor-link'><a href="#">IN1234</a></td>
+        <td class='data-style space' align='end'>$2,800.00</td>
+        <td class='data-style space' align='end'>$2,800.00</td>
+        <td class='date-value-box'>
+            <table>
+                <tr>
+                    <td><i class="fa fa-calendar space" aria-hidden="true"></i> </td>
+                    <td>14/06/2022</td>
+                </tr>
+            </table>
+
+
+
+
+        </td>
+        <td class='date-value-box'>
+            <table>
+                <tr>
+                    <td><i class="fa fa-calendar space" aria-hidden="true"></i> </td>
+                    <td>01/02/2022</td>
+                </tr>
+            </table>
+
+
+
+
+        </td>
+        <td class='data-style'>NZTG Production</td>
+        <td>
+
+            <table align="center">
+                <tr>
+                    <td class="due space-left space">Due</td>
+                    <td>
+                        <div class='divider'></div>
+                    </td>
+                    <td><button class="paynow-btn">Pay Now</button></td>
+                </tr>
+            </table>
+        </td>
+        <td><i class="fa fa-gear" style="color:#797b7e;font-size: 18px;cursor: pointer;"></i></td>
+
+        </th>
+    </tr>
+    <tr>
+
+        <td class='item' align='center'><input type="checkbox" title="select all" name="checkbox" id='checkbox' />
+            </div>
+        </td>
+        <td class='date-value-box'>
+            <table>
+                <tr>
+                    <td><i class="fa fa-calendar space" aria-hidden="true"></i> </td>
+                    <td>30/05/2022</td>
+                </tr>
+            </table>
+
+
+
+
+        </td>
+        <td class='anhor-link'><a href="#">SR1103</a></td>
+        <td class='data-style'>Bill Brown</td>
+        <td class='anhor-link'><a href="#">IN1234</a></td>
+        <td class='data-style space' align='end'>$2,800.00</td>
+        <td class='data-style space' align='end'>$2,800.00</td>
+        <td class='date-value-box'>
+            <table>
+                <tr>
+                    <td><i class="fa fa-calendar space" aria-hidden="true"></i> </td>
+                    <td>14/06/2022</td>
+                </tr>
+            </table>
+
+
+
+
+        </td>
+        <td class='date-value-box'>
+            <table>
+                <tr>
+                    <td><i class="fa fa-calendar space" aria-hidden="true"></i> </td>
+                    <td>01/02/2022</td>
+                </tr>
+            </table>
+
+
+
+
+        </td>
+        <td class='data-style'>NZTG Production</td>
+        <td>
+
+            <table align="center">
+                <tr>
+                    <td class="due space-left space">Due</td>
+                    <td>
+                        <div class='divider'></div>
+                    </td>
+                    <td><button class="paynow-btn">Pay Now</button></td>
+                </tr>
+            </table>
+        </td>
+        <td><i class="fa fa-gear" style="color:#797b7e;font-size: 18px;cursor: pointer;"></i></td>
+
+        </th>
+    </tr>
+    <tr>
+
+        <td class='item' align='center'><input type="checkbox" title="select all" name="checkbox" id='checkbox' />
+            </div>
+        </td>
+        <td class='date-value-box'>
+            <table>
+                <tr>
+                    <td><i class="fa fa-calendar space" aria-hidden="true"></i> </td>
+                    <td>30/05/2022</td>
+                </tr>
+            </table>
+
+
+
+
+        </td>
+        <td class='anhor-link'><a href="#">SR1103</a></td>
+        <td class='data-style'>Bill Brown</td>
+        <td class='anhor-link'><a href="#">IN1234</a></td>
+        <td class='data-style space' align='end'>$2,800.00</td>
+        <td class='data-style space' align='end'>$2,800.00</td>
+        <td class='date-value-box'>
+            <table>
+                <tr>
+                    <td><i class="fa fa-calendar space" aria-hidden="true"></i> </td>
+                    <td>14/06/2022</td>
+                </tr>
+            </table>
+
+
+
+
+        </td>
+        <td class='date-value-box'>
+            <table>
+                <tr>
+                    <td><i class="fa fa-calendar space" aria-hidden="true"></i> </td>
+                    <td>01/02/2022</td>
+                </tr>
+            </table>
+
+
+
+
+        </td>
+        <td class='data-style'>NZTG Production</td>
+        <td>
+
+            <table align="center">
+                <tr>
+                    <td class="due space-left space">Due</td>
+                    <td>
+                        <div class='divider'></div>
+                    </td>
+                    <td><button class="paynow-btn">Pay Now</button></td>
+                </tr>
+            </table>
+        </td>
+        <td><i class="fa fa-gear" style="color:#797b7e;font-size: 18px;cursor: pointer;"></i></td>
+
+        </th>
+    </tr>
+    <tr>
+
+        <td class='item' align='center'><input type="checkbox" title="select all" name="checkbox" id='checkbox' />
+            </div>
+        </td>
+        <td class='date-value-box'>
+            <table>
+                <tr>
+                    <td><i class="fa fa-calendar space" aria-hidden="true"></i> </td>
+                    <td>30/05/2022</td>
+                </tr>
+            </table>
+
+
+
+
+        </td>
+        <td class='anhor-link'><a href="#">SR1103</a></td>
+        <td class='data-style'>Bill Brown</td>
+        <td class='anhor-link'><a href="#">IN1234</a></td>
+        <td class='data-style space' align='end'>$2,800.00</td>
+        <td class='data-style space' align='end'>$2,800.00</td>
+        <td class='date-value-box'>
+            <table>
+                <tr>
+                    <td><i class="fa fa-calendar space" aria-hidden="true"></i> </td>
+                    <td>14/06/2022</td>
+                </tr>
+            </table>
+
+
+
+
+        </td>
+        <td class='date-value-box'>
+            <table>
+                <tr>
+                    <td><i class="fa fa-calendar space" aria-hidden="true"></i> </td>
+                    <td>01/02/2022</td>
+                </tr>
+            </table>
+
+
+
+
+        </td>
+        <td class='data-style'>NZTG Production</td>
+        <td>
+
+            <table align="center">
+                <tr>
+                    <td class="due space-left space">Due</td>
+                    <td>
+                        <div class='divider'></div>
+                    </td>
+                    <td><button class="paynow-btn">Pay Now</button></td>
+                </tr>
+            </table>
+        </td>
+        <td><i class="fa fa-gear" style="color:#797b7e;font-size: 18px;cursor: pointer;"></i></td>
+
+        </th>
+    </tr>
+    <tr>
+
+        <td class='item' align='center'><input type="checkbox" title="select all" name="checkbox" id='checkbox' />
+            </div>
+        </td>
+        <td class='date-value-box'>
+            <table>
+                <tr>
+                    <td><i class="fa fa-calendar space" aria-hidden="true"></i> </td>
+                    <td>30/05/2022</td>
+                </tr>
+            </table>
+
+
+
+
+        </td>
+        <td class='anhor-link'><a href="#">SR1103</a></td>
+        <td class='data-style'>Bill Brown</td>
+        <td class='anhor-link'><a href="#">IN1234</a></td>
+        <td class='data-style space' align='end'>$2,800.00</td>
+        <td class='data-style space' align='end'>$2,800.00</td>
+        <td class='date-value-box'>
+            <table>
+                <tr>
+                    <td><i class="fa fa-calendar space" aria-hidden="true"></i> </td>
+                    <td>14/06/2022</td>
+                </tr>
+            </table>
+
+
+
+
+        </td>
+        <td class='date-value-box'>
+            <table>
+                <tr>
+                    <td><i class="fa fa-calendar space" aria-hidden="true"></i> </td>
+                    <td>01/02/2022</td>
+                </tr>
+            </table>
+
+
+
+
+        </td>
+        <td class='data-style'>NZTG Production</td>
+        <td>
+
+            <table align="center">
+                <tr>
+                    <td class="due space-left space">Due</td>
+                    <td>
+                        <div class='divider'></div>
+                    </td>
+                    <td><button class="paynow-btn">Pay Now</button></td>
+                </tr>
+            </table>
+        </td>
+        <td><i class="fa fa-gear" style="color:#797b7e;font-size: 18px;cursor: pointer;"></i></td>
+
+        </th>
+    </tr>
+    <tr>
+
+        <td class='item' align='center'><input type="checkbox" title="select all" name="checkbox" id='checkbox' />
+            </div>
+        </td>
+        <td class='date-value-box'>
+            <table>
+                <tr>
+                    <td><i class="fa fa-calendar space" aria-hidden="true"></i> </td>
+                    <td>30/05/2022</td>
+                </tr>
+            </table>
+
+
+
+
+        </td>
+        <td class='anhor-link'><a href="#">SR1103</a></td>
+        <td class='data-style'>Bill Brown</td>
+        <td class='anhor-link'><a href="#">IN1234</a></td>
+        <td class='data-style space' align='end'>$2,800.00</td>
+        <td class='data-style space' align='end'>$2,800.00</td>
+        <td class='date-value-box'>
+            <table>
+                <tr>
+                    <td><i class="fa fa-calendar space" aria-hidden="true"></i> </td>
+                    <td>14/06/2022</td>
+                </tr>
+            </table>
+
+
+
+
+        </td>
+        <td class='date-value-box'>
+            <table>
+                <tr>
+                    <td><i class="fa fa-calendar space" aria-hidden="true"></i> </td>
+                    <td>01/02/2022</td>
+                </tr>
+            </table>
+
+
+
+
+        </td>
+        <td class='data-style'>NZTG Production</td>
+        <td>
+
+            <table align="center">
+                <tr>
+                    <td class="due space-left space">Due</td>
+                    <td>
+                        <div class='divider'></div>
+                    </td>
+                    <td><button class="paynow-btn">Pay Now</button></td>
+                </tr>
+            </table>
+        </td>
+        <td><i class="fa fa-gear" style="color:#797b7e;font-size: 18px;cursor: pointer;"></i></td>
+
+        </th>
+    </tr>
+
+    </table>
+    </td>
+
+
+    </tr>
+    </table>
+    </div>
+</body>
+
+</html>
